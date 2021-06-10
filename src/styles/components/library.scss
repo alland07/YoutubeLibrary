@@ -1,0 +1,36 @@
+.lib_container{
+    width: 30vw;
+    height: 95vh;
+    border-radius: 30px;
+    border: 2px solid $white;
+    margin: auto 2%;
+    display: flex;
+    .lib_name_container{
+        width: 80%;
+        height: 100%;
+        margin: 5% auto;
+        h1{
+            font-size: $h1;
+            text-align: center;
+        }
+        .displaySearch{
+            width: 100%;
+            display: flex;
+            button{
+                background-color: $bg;
+                border: 1px solid $white;
+                color: $white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: auto;
+                &:hover{
+                    background-color: $white;
+                    color: $bg;
+                }
+            }
+        }
+    }
+}
