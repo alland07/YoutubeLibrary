@@ -1,12 +1,12 @@
 .lib_container{
     width: 30vw;
-    height: 95vh;
+    height: auto    ;
     border-radius: 30px;
     border: 2px solid $white;
-    margin: auto 2%;
+    margin: 2% 2%;
     display: flex;
     .lib_name_container{
-        width: 80%;
+        width: 90%;
         height: 100%;
         margin: 5% auto;
         h1{
@@ -17,6 +17,7 @@
             width: 100%;
             display: flex;
             button{
+                width: 70%;
                 background-color: $bg;
                 border: 1px solid $white;
                 color: $white;
@@ -31,6 +32,31 @@
                     color: $bg;
                 }
             }
+        }
+        .Videos{
+            width: 100%;
+            .userVideo{
+                border: 1px solid $white;
+                margin: 10% 5%;
+                width: 90%;
+                display: flex;
+                flex-wrap: wrap;
+                &:nth-child(1){
+                    margin-top: 40px;
+                }
+                h1{
+                    font-size: 15px ;
+                    margin: auto;
+                }
+                .ytbMinia{
+                    margin: auto;
+                    display: flex;
+                    img{
+                        margin:auto;
+                    }
+                }
+            }
+            
         }
     }
 }

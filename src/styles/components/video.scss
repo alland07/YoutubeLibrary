@@ -1,0 +1,18 @@
+.SearchAndDisplay{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+
+    h2{
+        font-size: 20px;
+        width: 80%;
+        margin:10% auto 0 auto;
+        text-align: center;
+    }
+    .myVideo{
+        width: 80%;
+        height: 60%;
+        margin: auto;
+    }
+}

@@ -1,20 +1,13 @@
 import Library from './components/Library';
+import VideoDisplay from './components/VideoDisplay';
+import { User, Videos } from './Types/TypesList';
 
 import { useState, useEffect } from 'react';
 
-type Videos = {
-  title: string,
-  id: string
-}
-
-export type User = {
-  name: string,
-  videos: Videos[],
-  libName: string
-}
 function App() {
 
   const [user, setUser] = useState<User>();
+  const [videoDisplay, setVideoDisplay] = useState<Videos | any>();
 
   useEffect(() => {
     fetch("http://localhost:8400", {
@@ -24,12 +17,13 @@ function App() {
       .then(data => setUser(data))
   }, []);
 
+  console.log(videoDisplay);
   return (
     <div className="App">
-      {user ? <Library user={user} /> : <h1>Chargement</h1>}
+      {user ? <Library user={user} setVideoDisplay={setVideoDisplay} /> : <h1>Chargement</h1>}
       {/* Library component which displays the lib name + videos in the lib */}
       <div className="SearchAndDisplay">
-
+        {videoDisplay ? <VideoDisplay video={videoDisplay} /> : null}
       </div>
     </div>
   );
