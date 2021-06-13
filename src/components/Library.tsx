@@ -6,19 +6,17 @@ import { User, Videos } from '../Types/TypesList';
 
 type LibraryProps = {
     user: User,
-    setVideoDisplay: (video: Videos) => void
+    setVideoDisplay: (video: Videos) => void,
+    setDisplaySearchOrVideo: (arg: any) => void
 }
 
-function Library({ user, setVideoDisplay }: LibraryProps) {
+function Library({ user, setVideoDisplay, setDisplaySearchOrVideo }: LibraryProps) {
 
-    // String de recherche
-    const [searchOrVideo, setSearchOrVideo] = useState('');
     //onChange Filtered
     const [filtered, setFiltered] = useState<string>('');
 
-    let VIDEOS;
-
     //Filter by app name
+    let VIDEOS;
     if (filtered) {
         VIDEOS = user.videos.filter(app => app.title.toLowerCase().indexOf(filtered.toLowerCase()) !== -1)
             .map((datas, i) => {
@@ -46,7 +44,7 @@ function Library({ user, setVideoDisplay }: LibraryProps) {
             <div className="lib_name_container">
                 <h1>{user.libName}</h1>
                 <div className="displaySearch">
-                    <button onClick={() => { setSearchOrVideo("Search") }}>Ajouter une vidéo à ma librairie</button>
+                    <button onClick={() => { setDisplaySearchOrVideo((prevState: boolean) => !prevState) }}>Ajouter une vidéo à ma librairie</button>
                 </div>
                 <input type="text" onChange={(e) => setFiltered(e.target.value)}></input>
                 <div className="Videos">

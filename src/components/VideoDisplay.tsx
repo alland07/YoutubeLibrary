@@ -1,5 +1,3 @@
-import { Videos } from '../Types/TypesList';
-
 function VideoDisplay(video: any) {
 
     console.log(`http://www.youtube.com/watch?v=${video.video.id.videoId}`)

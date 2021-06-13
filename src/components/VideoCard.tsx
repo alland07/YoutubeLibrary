@@ -13,7 +13,7 @@ export default function VideoCard({ data, setVideoDisplay }: VideoCardProps) {
     const [searchedVideo, setSearchedVideo] = useState<any>();
 
     useEffect(() => {
-        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyBvB-BitIcApU0hr-1D6GzR-YmPKgFTjJQ&q=${data.title}`, {
+        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAZg_Ga2J_Q5DRjqdbI4yk8C0KDJDCzXg8&q=${data.title}`, {
             method: 'GET'
         })
             .then(response => response.json())
