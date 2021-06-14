@@ -7,10 +7,11 @@ import { User, Videos } from '../Types/TypesList';
 type LibraryProps = {
     user: User,
     setVideoDisplay: (video: Videos) => void,
-    setDisplaySearchOrVideo: (arg: any) => void
+    setDisplaySearchOrVideo: (arg: any) => void,
+    displayBoolean: boolean
 }
 
-function Library({ user, setVideoDisplay, setDisplaySearchOrVideo }: LibraryProps) {
+function Library({ user, setVideoDisplay, setDisplaySearchOrVideo, displayBoolean }: LibraryProps) {
 
     //onChange Filtered
     const [filtered, setFiltered] = useState<string>('');
@@ -44,14 +45,17 @@ function Library({ user, setVideoDisplay, setDisplaySearchOrVideo }: LibraryProp
             <div className="lib_name_container">
                 <h1>{user.libName}</h1>
                 <div className="displaySearch">
-                    <button onClick={() => { setDisplaySearchOrVideo((prevState: boolean) => !prevState) }}>Ajouter une vidéo à ma librairie</button>
+                    {!displayBoolean
+                        ? < button onClick={() => { setDisplaySearchOrVideo((prevState: boolean) => !prevState) }}>Ajouter une vidéo à ma librairie</button>
+                        : < button onClick={() => { setDisplaySearchOrVideo((prevState: boolean) => !prevState) }}>Retourner sur ma librairie</button>
+                    }
                 </div>
-                <input type="text" onChange={(e) => setFiltered(e.target.value)}></input>
+                <input type="text" onChange={(e) => setFiltered(e.target.value)} placeholder="Filtrer ma librairie"></input>
                 <div className="Videos">
                     {VIDEOS}
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

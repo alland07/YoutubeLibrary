@@ -1,0 +1,28 @@
+.formRequest{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    form{
+        display: flex;
+        flex-direction: wrap;
+        input{
+            width: auto;
+            height: auto;
+            margin: auto;
+            vertical-align: middle; 
+        }
+        .rechercher{
+                text-decoration: none;
+                display: inline-block;
+                border: none;
+                background-color: $white;
+                color: $bg;
+        }
+    }
+}
+.resultSearch{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}

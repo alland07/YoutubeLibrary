@@ -1,0 +1,13 @@
+.videoBordered{
+    border: 1 px solid $white;
+    width: 90%;
+    height: auto;
+    display: flex;
+    h3{
+        font-size:$h3 ;
+        text-align: center;
+    }
+    button{
+        font-size: 20px;
+    }
+}

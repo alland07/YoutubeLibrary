@@ -1,6 +1,10 @@
 @import "variables.scss";
 @import "reset.scss";
-
+//View
 @import "app.scss";
+//Components
 @import "./components/library.scss";
-@import "./components/video.scss";
+@import "./components/video_card.scss";
+@import "./components/video_request.scss";
+@import "./components/video_display.scss";
+@import "./components/search_video.scss";

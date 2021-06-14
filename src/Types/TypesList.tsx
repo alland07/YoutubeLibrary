@@ -3,7 +3,7 @@ export type Videos = {
     id: string,
     items: Items[]
 }
-type Items = {
+export type Items = {
     snippet: Snippet,
 }
 type ID = {
