@@ -24,7 +24,7 @@ function Library({ user, setVideoDisplay, setDisplaySearchOrVideo, displayBoolea
                 return (
                     <div key={i} className="userVideo">
                         <h1>{datas.title}</h1>
-                        <VideoCard setVideoDisplay={setVideoDisplay} data={datas} />
+                        <VideoCard setVideoDisplay={setVideoDisplay} data={datas} user={user} />
                     </div>
                 )
             })
@@ -34,11 +34,12 @@ function Library({ user, setVideoDisplay, setDisplaySearchOrVideo, displayBoolea
             return (
                 <div key={i} className="userVideo">
                     <h1>{datas.title}</h1>
-                    <VideoCard setVideoDisplay={setVideoDisplay} data={datas} />
+                    <VideoCard setVideoDisplay={setVideoDisplay} data={datas} user={user} />
                 </div>
             )
         })
     }
+
 
     return (
         <div className="lib_container">

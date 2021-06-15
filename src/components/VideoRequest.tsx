@@ -20,7 +20,7 @@ const VideoRequest = ({ datas, name }: VideoRequestProps) => {
         })
             .then(response => response.json())
             .catch(err => console.log(err));
-        console.log(app)
+        document.location.reload();
     }
 
     return (

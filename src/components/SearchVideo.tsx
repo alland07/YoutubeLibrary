@@ -17,7 +17,7 @@ const SearchVideo: React.FC<SearchVideoProps> = ({ name }) => {
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&key=AIzaSyCw434uC5c9mVuY1K1VNN29wu9Bun-CHGo&q=${toSearch}`, {
+        fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&type=video&key=AIzaSyBvB-BitIcApU0hr-1D6GzR-YmPKgFTjJQ&q=${toSearch}`, {
             method: 'GET'
         })
             .then(response => response.json())
